@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Synthesizer</string>
+    <string name="a">A</string>
+    <string name="bb">B♭</string>
+    <string name="b">B</string>
+    <string name="c">C</string>
+    <string name="cs">C♯</string>
+    <string name="d">D</string>
+    <string name="ds">D♯</string>
+    <string name="e">E</string>
+    <string name="f">F</string>
+    <string name="fs">F♯</string>
+    <string name="g">G</string>
+    <string name="gs">G♯</string>
+    <string name="play_scale">Play Scale</string>
+    <string name="high_a">High A</string>
+    <string name="high_bb">High B♭</string>
+    <string name="high_b">High B</string>
+    <string name="high_c">High C</string>
+    <string name="high_cs">High C♯</string>
+    <string name="high_d">High D</string>
+    <string name="high_ds">High D♯</string>
+    <string name="high_e">High E</string>
+    <string name="high_f">High F</string>
+    <string name="high_fs">High F♯</string>
+    <string name="high_g">High G</string>
+    <string name="high_gs">High G♯</string>
+</resources>
