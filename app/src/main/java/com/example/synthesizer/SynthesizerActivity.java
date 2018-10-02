@@ -92,6 +92,14 @@ public class SynthesizerActivity extends AppCompatActivity implements View.OnCli
     private int noteFs4;
     private int noteG4;
     private int noteGs4;
+    private int noteA5;
+    private int noteBb5;
+    private int noteB5;
+    private int noteC5;
+    private int noteCs5;
+    private int noteD5;
+    private int noteDs5;
+    private int noteE5;
 
     Song scale = new Song();
     Song twinklePart = new Song();
@@ -283,6 +291,7 @@ public class SynthesizerActivity extends AppCompatActivity implements View.OnCli
         createBlankPt1();
         createBlankPt2();
         createBlankPt3();
+        createBlankPt4();
     }
     private void createBlankPt1(){
         BlankT1.add(new Note(noteG3,4.0f));
@@ -537,23 +546,57 @@ public class SynthesizerActivity extends AppCompatActivity implements View.OnCli
         BlankT2.add(new Note(noteD3, 4.0f));
         BlankT2.add(new Note(0,1.0f));
     }
-    private void createBlankPt4(){
-        BlankT1.add(new Note(noteG3,4.0f));
-        BlankT1.add(new Note(noteG3,4.0f));
-        BlankT1.add(new Note(noteG3,4.0f));
-        BlankT1.add(new Note(noteF3,4.0f));
-        BlankT1.add(new Note(0,4.0f));
-        BlankT1.add(new Note(noteD4,4.0f));
-        BlankT1.add(new Note(noteA4,4.0f));
-        BlankT1.add(new Note(noteD4,4.0f));
-        BlankT2.add(new Note(noteE3,4.0f));
-        BlankT2.add(new Note(noteE3,4.0f));
-        BlankT2.add(new Note(noteE3,4.0f));
-        BlankT2.add(new Note(0,4.0f));
-        BlankT2.add(new Note(0,4.0f));
-        BlankT2.add(new Note(noteD3,4.0f));
-        BlankT2.add(new Note(noteA3,4.0f));
-        BlankT2.add(new Note(noteD3,4.0f));
+    private void createBlankPt4() {
+        BlankT1.add(new Note(noteG3, 4.0f));
+        BlankT1.add(new Note(noteG3, 4.0f));
+        BlankT1.add(new Note(noteG3, 4.0f));
+        BlankT1.add(new Note(noteF3, 4.0f));
+        BlankT1.add(new Note(0, 4.0f));
+        BlankT1.add(new Note(noteD4, 4.0f));
+        BlankT1.add(new Note(noteA4, 4.0f));
+        BlankT1.add(new Note(noteD4, 4.0f));
+        BlankT2.add(new Note(noteE3, 4.0f));
+        BlankT2.add(new Note(noteE3, 4.0f));
+        BlankT2.add(new Note(noteE3, 4.0f));
+        BlankT2.add(new Note(0, 4.0f));
+        BlankT2.add(new Note(0, 4.0f));
+        BlankT2.add(new Note(noteD3, 4.0f));
+        BlankT2.add(new Note(noteA3, 4.0f));
+        BlankT2.add(new Note(noteD3, 4.0f));
+
+        BlankT1.add(new Note(noteB4, 4.0f));
+        BlankT1.add(new Note(noteB4, 4.0f));
+        BlankT1.add(new Note(noteB4, 4.0f));
+        BlankT1.add(new Note(noteA4, 4.0f));
+        BlankT1.add(new Note(0, 4.0f));
+        BlankT1.add(new Note(noteA5, 4.0f));
+        BlankT1.add(new Note(noteB5, 4.0f));
+        BlankT1.add(new Note(noteA5, 4.0f));
+        BlankT2.add(new Note(noteG3, 4.0f));
+        BlankT2.add(new Note(noteG3, 4.0f));
+        BlankT2.add(new Note(noteG3, 4.0f));
+        BlankT2.add(new Note(0, 4.0f));
+        BlankT2.add(new Note(0, 4.0f));
+        BlankT2.add(new Note(noteA4, 4.0f));
+        BlankT2.add(new Note(noteB4, 4.0f));
+        BlankT2.add(new Note(noteA4, 4.0f));
+
+        BlankT1.add(new Note(noteFs4, 4.0f));
+        BlankT1.add(new Note(noteFs4, 4.0f));
+        BlankT1.add(new Note(noteFs4, 4.0f));
+        BlankT1.add(new Note(noteCs4, 4.0f));
+        BlankT1.add(new Note(0, 4.0f));
+        BlankT1.add(new Note(noteE4, 4.0f));
+        BlankT1.add(new Note(noteFs4, 4.0f));
+        BlankT1.add(new Note(noteE4, 4.0f));
+        BlankT2.add(new Note(noteB4, 4.0f));
+        BlankT2.add(new Note(noteB4, 4.0f));
+        BlankT2.add(new Note(noteB4, 4.0f));
+        BlankT2.add(new Note(0, 4.0f));
+        BlankT2.add(new Note(0, 4.0f));
+        BlankT2.add(new Note(noteE3, 4.0f));
+        BlankT2.add(new Note(noteF3, 4.0f));
+        BlankT2.add(new Note(noteE3, 4.0f));
     }
 
     private void initializeNoteMap() {
@@ -586,43 +629,51 @@ public class SynthesizerActivity extends AppCompatActivity implements View.OnCli
     }
 
     private void initializeSoundPool() {
-        soundPool= new SoundPool(10, AudioManager.STREAM_MUSIC,0);
-        noteA2 = soundPool.load(this, R.raw.scalea2,1);
-        noteBb2 = soundPool.load(this, R.raw.scalebflat2,1);
-        noteB2 = soundPool.load(this, R.raw.scaleb2,1);
-        noteC2 = soundPool.load(this, R.raw.scalec2,1);
-        noteCs2 = soundPool.load(this, R.raw.scalecsharp2,1);
-        noteD2 = soundPool.load(this, R.raw.scaled2,1);
-        noteDs2 = soundPool.load(this, R.raw.scaledsharp2,1);
-        noteE2 = soundPool.load(this, R.raw.scalee2,1);
-        noteF2 = soundPool.load(this, R.raw.scalef2,1);
-        noteFs2 = soundPool.load(this, R.raw.scalefsharp2,1);
-        noteG2 = soundPool.load(this, R.raw.scaleg2,1);
-        noteGs2 = soundPool.load(this, R.raw.scalegsharp2,1);
-        noteA3 = soundPool.load(this,R.raw.scalea3,1);
-        noteBb3 = soundPool.load(this,R.raw.scalebflat3,1);
-        noteB3 = soundPool.load(this,R.raw.scaleb3,1);
-        noteC3 = soundPool.load(this,R.raw.scalec,1);
-        noteCs3 = soundPool.load(this,R.raw.scalecs,1);
-        noteD3 = soundPool.load(this,R.raw.scaled,1);
-        noteDs3 = soundPool.load(this,R.raw.scaleds,1);
-        noteE3 = soundPool.load(this,R.raw.scalee,1);
-        noteF3 = soundPool.load(this,R.raw.scalef,1);
-        noteFs3 = soundPool.load(this,R.raw.scalefs,1);
-        noteG3 = soundPool.load(this,R.raw.scaleg,1);
-        noteGs3 = soundPool.load(this,R.raw.scalegs,1);
-        noteA4= soundPool.load(this,R.raw.scalehigha,1);
-        noteBb4 = soundPool.load(this,R.raw.scalehighbb,1);
-        noteB4 = soundPool.load(this,R.raw.scalehighb,1);
-        noteC4 = soundPool.load(this,R.raw.scalehighc,1);
-        noteCs4 = soundPool.load(this,R.raw.scalehighcs,1);
-        noteD4 = soundPool.load(this,R.raw.scalehighd,1);
-        noteDs4 = soundPool.load(this,R.raw.scalehighds,1);
-        noteE4 = soundPool.load(this,R.raw.scalehighe,1);
-        noteF4 = soundPool.load(this,R.raw.scalehighf,1);
-        noteFs4 = soundPool.load(this,R.raw.scalehighfs,1);
-        noteG4 = soundPool.load(this,R.raw.scalehighg,1);
-        noteGs4 = soundPool.load(this,R.raw.scalehighgs,1);
+        soundPool = new SoundPool(10, AudioManager.STREAM_MUSIC, 0);
+        noteA2 = soundPool.load(this, R.raw.scalea2, 1);
+        noteBb2 = soundPool.load(this, R.raw.scalebflat2, 1);
+        noteB2 = soundPool.load(this, R.raw.scaleb2, 1);
+        noteC2 = soundPool.load(this, R.raw.scalec2, 1);
+        noteCs2 = soundPool.load(this, R.raw.scalecsharp2, 1);
+        noteD2 = soundPool.load(this, R.raw.scaled2, 1);
+        noteDs2 = soundPool.load(this, R.raw.scaledsharp2, 1);
+        noteE2 = soundPool.load(this, R.raw.scalee2, 1);
+        noteF2 = soundPool.load(this, R.raw.scalef2, 1);
+        noteFs2 = soundPool.load(this, R.raw.scalefsharp2, 1);
+        noteG2 = soundPool.load(this, R.raw.scaleg2, 1);
+        noteGs2 = soundPool.load(this, R.raw.scalegsharp2, 1);
+        noteA3 = soundPool.load(this, R.raw.scalea3, 1);
+        noteBb3 = soundPool.load(this, R.raw.scalebflat3, 1);
+        noteB3 = soundPool.load(this, R.raw.scaleb3, 1);
+        noteC3 = soundPool.load(this, R.raw.scalec, 1);
+        noteCs3 = soundPool.load(this, R.raw.scalecs, 1);
+        noteD3 = soundPool.load(this, R.raw.scaled, 1);
+        noteDs3 = soundPool.load(this, R.raw.scaleds, 1);
+        noteE3 = soundPool.load(this, R.raw.scalee, 1);
+        noteF3 = soundPool.load(this, R.raw.scalef, 1);
+        noteFs3 = soundPool.load(this, R.raw.scalefs, 1);
+        noteG3 = soundPool.load(this, R.raw.scaleg, 1);
+        noteGs3 = soundPool.load(this, R.raw.scalegs, 1);
+        noteA4 = soundPool.load(this, R.raw.scalehigha, 1);
+        noteBb4 = soundPool.load(this, R.raw.scalehighbb, 1);
+        noteB4 = soundPool.load(this, R.raw.scalehighb, 1);
+        noteC4 = soundPool.load(this, R.raw.scalehighc, 1);
+        noteCs4 = soundPool.load(this, R.raw.scalehighcs, 1);
+        noteD4 = soundPool.load(this, R.raw.scalehighd, 1);
+        noteDs4 = soundPool.load(this, R.raw.scalehighds, 1);
+        noteE4 = soundPool.load(this, R.raw.scalehighe, 1);
+        noteF4 = soundPool.load(this, R.raw.scalehighf, 1);
+        noteFs4 = soundPool.load(this, R.raw.scalehighfs, 1);
+        noteG4 = soundPool.load(this, R.raw.scalehighg, 1);
+        noteGs4 = soundPool.load(this, R.raw.scalehighgs, 1);
+        noteA5 = soundPool.load(this, R.raw.scalea5, 1);
+        noteBb5 = soundPool.load(this, R.raw.scalebflat5, 1);
+        noteB5 = soundPool.load(this, R.raw.scaleb5, 1);
+        noteC5 = soundPool.load(this, R.raw.scalec5, 1);
+        noteCs5 = soundPool.load(this, R.raw.scalecs5, 1);
+        noteD5 = soundPool.load(this, R.raw.scaled5, 1);
+        noteDs5 = soundPool.load(this, R.raw.scaleds5, 1);
+        noteE5 = soundPool.load(this, R.raw.scalee5, 1);
     }
 
     private void setListeners() {
@@ -693,14 +744,6 @@ public class SynthesizerActivity extends AppCompatActivity implements View.OnCli
         checkboxFullTwinkle=findViewById(R.id.checkBox_synth_twinklecomplete);
         buttonOde=findViewById(R.id.button_synth_ode);
         buttonBlank=findViewById(R.id.button_synth_blank);
-    }
-
-    private void delay(int length) {
-        try {
-            Thread.sleep(length);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
     }
 
     private void playNote(int note, float rate){
